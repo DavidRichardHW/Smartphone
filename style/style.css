@@ -1,84 +1,98 @@
 @charset "UTF-8";
 
 /*body*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    height: 100vh;
-    width: 100vw;
-    max-height: 100vh;
-    min-width: 450px;
-    min-height: 600px;
-    background-image: url(../image/fundo-madeira.jpg);
-    position: relative;
-}
-/*celular*/
-#princ{
-    height: 734px;
-    width: 365px;
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-}
-#power{
-    position: absolute;
-    top: 93%;
-    left: 50%;
-    height: 40px;
-    width: 40px;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    cursor: pointer;
-}
-#power:active{z-index: 0;}
-#power:active + #secon #cell{z-index: 1;}
-#cell{
-    height: 738px;
-    width: 362px;
-    position: absolute;
-    top: 49.4%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    transition: z-index 0.3s ease;
-}
-#terc{
-    height: 560px;
-    width: 315px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-}
-#tela{
-    height: 100%;
-    width: 100%;
-}
-/*/celular*/
-/*aplicativos*/
-#redes{
-    gap: 10px;
-    top: 50%;
-    left: 90%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-}
-.logos{
-    width: 80px;
-    border-radius: 30%;
-    text-align: right;
-}
-.logos:hover{
-    width: 85px;
-    border-radius: 50%;
-    box-shadow: black 0px 0px 50px;
-}
-/*/aplicativos*/
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-image: url(../image/fundo-madeira.jpg);
+        height: 100vh;
+        max-height: 100vh;
+        min-width: 450px;
+        min-height: 600px;
+        position: relative;
+        width: 100vw;
+    }
+    /*celular*/
+        #princ{
+            height: 734px;
+            left: 40%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 365px;
+        }
+        #power{
+            /*box*/
+                height: 40px;
+                position: absolute;
+                left: 50%;
+                top: 93%;
+                width: 40px;
+
+            /*effect*/
+                cursor: pointer;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+        }
+        #power:active{z-index: 0;}
+        #power:active + #secon #cell{z-index: 1;}
+        #cell{
+            /*box*/
+                height: 738px;
+                left: 50%;
+                position: absolute;
+                top: 49.4%;
+                width: 362px;
+
+            /*effect*/
+                transform: translate(-50%, -50%);
+                transition: z-index 0.3s ease;
+                z-index: 0;
+        }
+        #terc{
+            /*box*/
+                height: 560px;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                width: 315px;
+
+            /*effect*/
+                transform: translate(-50%, -50%);
+                z-index: 0;
+        }
+        #tela{
+            height: 100%;
+            width: 100%;
+        }
+    /*/celular*/
+    /*aplicativos*/
+        #redes{
+            /*layout*/
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+            /*box*/
+                left: 90%;
+                position: absolute;
+                top: 50%;
+
+            /*effect*/
+                transform: translate(-50%, -50%);
+        }
+        .logos{
+            border-radius: 30%;
+            text-align: right;
+            width: 80px;
+        }
+        .logos:hover{
+            border-radius: 50%;
+            box-shadow: black 0px 0px 50px;
+            width: 85px;
+        }
+    /*/aplicativos*/
 /*/body*/
